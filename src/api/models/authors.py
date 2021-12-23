@@ -5,8 +5,7 @@ from api.models.books import BookSchema
 class Author(db.Model):
   __tablename__ = 'authors'
 
-  id = db.Column(db.Integer, primary_key=True,
-  autoincrement=True)
+  id = db.Column(db.Integer, primary_key=True, autoincrement=True)
   first_name = db.Column(db.String(20))
   last_name = db.Column(db.String(20))
   created = db.Column(db.DateTime, server_default=db.func.now())
